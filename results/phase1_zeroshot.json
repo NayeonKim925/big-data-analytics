@@ -1,0 +1,27 @@
+{
+  "cache": "cache/sim_test.npz",
+  "coverage": {
+    "true_class_computed_pct": 84.83,
+    "full_true_path_computed_pct": 69.24,
+    "avg_computed_classes_per_doc": 68.5
+  },
+  "ranking": {
+    "name": "ranking",
+    "n_docs": 19658,
+    "p@1": 0.3663,
+    "p@3": 0.2748,
+    "mrr_literal": 0.2533,
+    "mrr_filtered": 0.2981
+  },
+  "decoders": {
+    "hier_greedy": 0.3753,
+    "top3": 0.2728,
+    "path_auto": 0.4623,
+    "path_len3": 0.468
+  },
+  "greedy_level_accuracy_pct": {
+    "root": 59.16,
+    "mid": 32.11,
+    "leaf": 20.67
+  }
+}
