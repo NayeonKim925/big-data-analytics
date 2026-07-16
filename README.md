@@ -14,7 +14,7 @@
 | 1 | zero-shot NLI + path decoder | — | 0.4623 | — |
 | 2 | + classifier (초기: silver 30%, len 256) | 30.3% | 0.3995 | −6.3 |
 | 3 | + silver 정제 (min_conf 0.15) + len 512 | 43.2% | 0.4614 | +6.2 |
-| 4 | + LLM refine 1K calls (과제 예산) | 43.8% | 0.4571 | ±0 |
+| 4 | + LLM refine 1K calls (1차 목표) | 43.8% | 0.4571 | ±0 |
 | 5 | + LLM refine 10K calls 누적 (scaling 실험) | 48.8% | 0.5180 | +5.7 |
 | 6 | + self-training (행 3 기준, 800 batches 고정) | — | 0.4729 | +1.2 |
 | 7 | **+ self-training (행 5 기준, audit-val stopping)** | — | **0.5488** | **+3.1** |
