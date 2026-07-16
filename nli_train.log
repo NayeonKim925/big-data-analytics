@@ -1,0 +1,11 @@
+nohup: ignoring input
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  59%|█████▉    | 233/393 [00:00<00:00, 2323.36it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 2757.57it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: roberta-large-mnli
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.

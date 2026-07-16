@@ -1,0 +1,41 @@
+nohup: ignoring input
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6992.20it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+training docs with cores: 23980/29487
+  epoch 0 step 100 loss 44.4990 (0.24s/step)
+  epoch 0 step 200 loss 28.9889 (0.24s/step)
+  epoch 0 step 300 loss 22.6502 (0.24s/step)
+  epoch 0 step 400 loss 19.1104 (0.24s/step)
+  epoch 0 step 500 loss 16.8318 (0.24s/step)
+  epoch 0 step 600 loss 15.2890 (0.24s/step)
+  epoch 0 step 700 loss 14.1335 (0.24s/step)
+EPOCH RESULT: {"epoch": 0, "train_loss": 13.6596, "minutes": 4.3, "p@1": 0.6928, "p@3": 0.5125, "mrr_filtered": 0.5145, "f1_top3": 0.5054, "f1_path_auto": 0.5116, "f1_path_len3": 0.502, "f1_thresh05": 0.4448, "train_fit_p@1": 0.749, "test_top1_share": 0.1542}
+  epoch 1 step 100 loss 6.5645 (0.26s/step)
+  epoch 1 step 200 loss 6.6671 (0.27s/step)
+  epoch 1 step 300 loss 6.6094 (0.27s/step)
+  epoch 1 step 400 loss 6.5669 (0.27s/step)
+  epoch 1 step 500 loss 6.5490 (0.27s/step)
+  epoch 1 step 600 loss 6.5233 (0.27s/step)
+  epoch 1 step 700 loss 6.5273 (0.26s/step)
+EPOCH RESULT: {"epoch": 1, "train_loss": 6.4928, "minutes": 4.6, "p@1": 0.6305, "p@3": 0.5024, "mrr_filtered": 0.5104, "f1_top3": 0.4964, "f1_path_auto": 0.5015, "f1_path_len3": 0.5008, "f1_thresh05": 0.4486, "train_fit_p@1": 0.823, "test_top1_share": 0.1482}
+  epoch 2 step 100 loss 5.5163 (0.26s/step)
+  epoch 2 step 200 loss 5.5237 (0.26s/step)
+  epoch 2 step 300 loss 5.5354 (0.26s/step)
+  epoch 2 step 400 loss 5.5383 (0.26s/step)
+  epoch 2 step 500 loss 5.5553 (0.26s/step)
+  epoch 2 step 600 loss 5.5264 (0.26s/step)
+  epoch 2 step 700 loss 5.5422 (0.27s/step)
+EPOCH RESULT: {"epoch": 2, "train_loss": 5.5462, "minutes": 4.6, "p@1": 0.5914, "p@3": 0.4936, "mrr_filtered": 0.4999, "f1_top3": 0.4879, "f1_path_auto": 0.518, "f1_path_len3": 0.5183, "f1_thresh05": 0.447, "train_fit_p@1": 0.827, "test_top1_share": 0.1275}
+done. per-epoch log -> results/phase3_log.json
