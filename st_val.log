@@ -1,0 +1,32 @@
+nohup: ignoring input
+audit-val: 3000 docs held out, ST pool: 26487
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6179.33it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+initialized from checkpoints/epoch_2.pt
+VAL@0: 0.5233
+  batch 50/800 loss 422.7065 (0.64s/batch)
+  batch 100/800 loss 359.8523 (0.53s/batch)
+ST RESULT: {"batch": 100, "val_path_f1": 0.5357, "test_path_f1": 0.5338}
+  batch 150/800 loss 347.4368 (1.03s/batch)
+  batch 200/800 loss 343.6299 (0.87s/batch)
+ST RESULT: {"batch": 200, "val_path_f1": 0.5447, "test_path_f1": 0.5488}
+  batch 250/800 loss 343.1245 (1.11s/batch)
+  batch 300/800 loss 344.4097 (0.99s/batch)
+ST RESULT: {"batch": 300, "val_path_f1": 0.526, "test_path_f1": 0.5313}
+  batch 350/800 loss 342.5497 (1.13s/batch)
+  batch 400/800 loss 342.7959 (1.04s/batch)
+ST RESULT: {"batch": 400, "val_path_f1": 0.5175, "test_path_f1": 0.5204}
+early stop at 400 (best val @ 200)
+DONE. best val 0.5447 @ batch 200; adopted checkpoint: checkpoints/st_best_val.pt
