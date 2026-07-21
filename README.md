@@ -25,11 +25,13 @@
 상세 구현/실험/한계는 [Technical Report](docs/technical_report.md)에 정리했습니다.
 
 ---
-📑 **발표자료 **
 
-저장소에는 프로젝트 내용을 보완한 **최신 발표자료(PPT/PDF)** 가 있습니다.
-(지원서 포트폴리오와는 별도로 프로젝트 설명을 업데이트한 버전입니다.)
+## 📑 발표자료
 
+본 저장소에는 프로젝트 내용을 보완한 **최신 발표자료(PPT)** 를 포함했습니다.
+
+- 📊 [최신 발표자료 (PPTX)](./Weakly-Supervised-HTMC_Final_Presentation.pptx)
+  
 ## Why This Project?
 
 Weakly-supervised hierarchical text classification은 문서–라벨 쌍이 전혀 없다고 가정합니다. TaxoClass는 이 조건에서 taxonomy 정보만으로 pseudo label을 생성해 분류기를 학습시키는 프레임워크입니다.
