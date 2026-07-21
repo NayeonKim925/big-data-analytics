@@ -30,7 +30,7 @@
 
 본 저장소에는 프로젝트 내용을 보완한 **최신 발표자료(PPT)** 를 포함했습니다.
 
-- 📊 [최신 발표자료 (PPTX)](./Weakly-Supervised-HTMC_Final_Presentation.pptx)
+- 📊 [최신 발표자료 (PPTX)](./Weakly-Supervised-HTMC_Final_Presentation.pptx.pptx)
   
 ## Why This Project?
 
