@@ -22,7 +22,7 @@
 - 병목은 모델 구조가 아니라 **silver label 품질**이었습니다 — 겉보기 지표는 71%로 양호했지만, 실제 라벨 단위 정밀도는 **30%**였습니다.
 - 데이터 정제 + LLM 기반 재라벨링으로 정밀도를 **30% → 49%**까지 끌어올렸고, Example-F1을 **0.40 → 0.55**로 개선했습니다.
 
-읽는 시간 약 3분 · 상세 구현/실험/한계는 [Technical Report](docs/technical_report.md)에 정리했습니다.
+상세 구현/실험/한계는 [Technical Report](docs/technical_report.md)에 정리했습니다.
 
 ---
 
