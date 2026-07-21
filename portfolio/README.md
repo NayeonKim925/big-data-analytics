@@ -6,6 +6,22 @@
 > 한 줄 요약: 라벨 0개에서 531-클래스 계층 분류기를 학습하고, 성능 병목이 모델이 아니라
 > silver label 품질임을 실험으로 규명한 과정. Example-F1 **0.3995 → 0.5488** (논문 NoST 0.5431 상회).
 
+## 슬라이드 미리보기
+
+**1. 표지**
+![표지](slides/01_cover.png)
+
+**2. Overview — 성능 궤적과 네 가지 판단**
+![Overview](slides/02_overview.png)
+
+**3. Problem Solving — 지표 반전 · threshold 곡선 · 의사결정 로그**
+![Problem Solving](slides/03_problem_solving.png)
+
+**4. Results — 기여 분석과 측정 조건 공개**
+![Results](slides/04_results.png)
+
+> 편집 가능한 원본은 [`portfolio.pptx`](portfolio.pptx), 열람용은 [`portfolio_preview.pdf`](portfolio_preview.pdf).
+
 ## 파일
 
 | 파일 | 설명 |
