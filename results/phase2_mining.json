@@ -1,0 +1,23 @@
+{
+  "n_docs": 29487,
+  "min_conf": 0.15,
+  "docs_with_core_pct": 78.6,
+  "avg_cores_per_doc": 1.45,
+  "core_level_dist": {
+    "root": 10133,
+    "mid": 17958,
+    "leaf": 14627
+  },
+  "core_precision_pct": 43.16,
+  "eq7_positive_precision_pct": 38.96,
+  "core_size_hist": {
+    "0": 6309,
+    "1": 9938,
+    "2": 8326,
+    "3": 3757,
+    "4": 957,
+    "5": 173,
+    "6": 25,
+    "7": 2
+  }
+}

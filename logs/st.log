@@ -1,0 +1,36 @@
+nohup: ignoring input
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5534.67it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+initialized from checkpoints/epoch_2.pt (epoch 2)
+  batch 50/800 loss 432.6128 (0.42s/batch)
+  batch 100/800 loss 357.1486 (0.41s/batch)
+  batch 150/800 loss 347.7500 (0.41s/batch)
+  batch 200/800 loss 344.1539 (0.41s/batch)
+ST RESULT: {"batch": 200, "p@1": 0.4016, "p@3": 0.3023, "mrr_filtered": 0.3056, "f1_top3": 0.3, "f1_path_auto": 0.4964, "f1_path_len3": 0.4892, "f1_thresh05": 0.0119}
+  batch 250/800 loss 344.0049 (0.70s/batch)
+  batch 300/800 loss 343.7908 (0.65s/batch)
+  batch 350/800 loss 343.6665 (0.62s/batch)
+  batch 400/800 loss 341.9766 (0.59s/batch)
+ST RESULT: {"batch": 400, "p@1": 0.4328, "p@3": 0.3334, "mrr_filtered": 0.3288, "f1_top3": 0.3305, "f1_path_auto": 0.4891, "f1_path_len3": 0.4808, "f1_thresh05": 0.0111}
+  batch 450/800 loss 342.7242 (0.73s/batch)
+  batch 500/800 loss 341.1635 (0.70s/batch)
+  batch 550/800 loss 341.0373 (0.67s/batch)
+  batch 600/800 loss 342.1984 (0.65s/batch)
+ST RESULT: {"batch": 600, "p@1": 0.4476, "p@3": 0.3458, "mrr_filtered": 0.3385, "f1_top3": 0.3426, "f1_path_auto": 0.4808, "f1_path_len3": 0.4738, "f1_thresh05": 0.011}
+  batch 650/800 loss 341.1265 (0.74s/batch)
+  batch 700/800 loss 341.1612 (0.72s/batch)
+  batch 750/800 loss 341.2078 (0.70s/batch)
+  batch 800/800 loss 341.0985 (0.68s/batch)
+ST RESULT: {"batch": 800, "p@1": 0.4545, "p@3": 0.3447, "mrr_filtered": 0.336, "f1_top3": 0.3412, "f1_path_auto": 0.4729, "f1_path_len3": 0.4706, "f1_thresh05": 0.011}

@@ -1,0 +1,22 @@
+[
+  {
+    "batch": 100,
+    "val_path_f1": 0.5357,
+    "test_path_f1": 0.5338
+  },
+  {
+    "batch": 200,
+    "val_path_f1": 0.5447,
+    "test_path_f1": 0.5488
+  },
+  {
+    "batch": 300,
+    "val_path_f1": 0.526,
+    "test_path_f1": 0.5313
+  },
+  {
+    "batch": 400,
+    "val_path_f1": 0.5175,
+    "test_path_f1": 0.5204
+  }
+]

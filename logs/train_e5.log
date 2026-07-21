@@ -1,0 +1,34 @@
+nohup: ignoring input
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6290.73it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+training docs with cores: 23178/29487
+resumed from checkpoints/epoch_2.pt (next epoch 3)
+  epoch 3 step 100 loss 4.2941 (0.24s/step)
+  epoch 3 step 200 loss 4.4021 (0.24s/step)
+  epoch 3 step 300 loss 4.4361 (0.24s/step)
+  epoch 3 step 400 loss 4.4145 (0.24s/step)
+  epoch 3 step 500 loss 4.4063 (0.24s/step)
+  epoch 3 step 600 loss 4.3927 (0.24s/step)
+  epoch 3 step 700 loss 4.3889 (0.24s/step)
+EPOCH RESULT: {"epoch": 3, "train_loss": 4.3876, "minutes": 4.1, "p@1": 0.5336, "p@3": 0.4111, "mrr_filtered": 0.4232, "f1_top3": 0.4063, "f1_path_auto": 0.4209, "f1_path_len3": 0.4187, "f1_thresh05": 0.3846, "train_fit_p@1": 0.8755, "test_top1_share": 0.1299}
+  epoch 4 step 100 loss 3.4721 (0.27s/step)
+  epoch 4 step 200 loss 3.5026 (0.27s/step)
+  epoch 4 step 300 loss 3.4632 (0.27s/step)
+  epoch 4 step 400 loss 3.4662 (0.26s/step)
+  epoch 4 step 500 loss 3.4918 (0.26s/step)
+  epoch 4 step 600 loss 3.4583 (0.26s/step)
+  epoch 4 step 700 loss 3.4507 (0.26s/step)
+EPOCH RESULT: {"epoch": 4, "train_loss": 3.4459, "minutes": 4.5, "p@1": 0.5223, "p@3": 0.4293, "mrr_filtered": 0.4351, "f1_top3": 0.4243, "f1_path_auto": 0.4569, "f1_path_len3": 0.4467, "f1_thresh05": 0.3973, "train_fit_p@1": 0.8775, "test_top1_share": 0.0848}
+done. per-epoch log -> results/phase3_log.json
