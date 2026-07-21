@@ -32,24 +32,9 @@ Weakly-supervised hierarchical text classification은 문서–라벨 쌍이 전
 
 재현 과정에서, 학습시킨 분류기가 오히려 아무것도 학습하지 않은 zero-shot 모델보다 낮은 성능을 냈습니다. 이 프로젝트는 모델 구조를 바꾸는 대신, **왜 성능이 떨어졌는지를 체계적으로 진단하고 병목을 규명하는 데** 집중했습니다. 결과는 위 그래프의 굴곡이 보여줍니다 — 병목은 데이터였고, 데이터를 개선하는 것만으로 zero-shot을 상회할 수 있었습니다.
 
-## Project Timeline
-
-```mermaid
-flowchart TD
-    A["TaxoClass 재현"] --> B["분류기가 zero-shot보다 낮음"]
-    B --> C["학습 설정 가설 배제"]
-    C --> D["지표 재설계 → 라벨 단위 정밀도 30%"]
-    D --> E["Silver Label 정제"]
-    E --> F["LLM Refinement (소규모) → 효과 없음"]
-    F --> G["LLM Refinement (확장) → 정밀도 49%"]
-    G --> H["Self-Training"]
-    H --> I["최종 모델 F1 0.55"]
-```
-
 ## Key Results
 
-<details>
-<summary>단계별 Example-F1 (test) — 자세히 보기</summary>
+<summary>단계별 Example-F1 (test) </summary>
 
 | Stage | Example-F1 |
 |---|---|
@@ -61,7 +46,6 @@ flowchart TD
 
 Self-Training 단계는 audit-validation stopping에 소량의 train gold label을 사용하므로 순수 weak-supervision 세팅을 벗어납니다. 논문 세팅을 그대로 준수한 최고 성능은 LLM Refinement 단계의 **0.5180**입니다. 전체 7단계 결과표는 Technical Report에 있습니다.
 
-</details>
 
 ## What I Learned
 
