@@ -65,19 +65,7 @@ min_conf 스윕 결과 (0 → 0.3에서 precision 30% → 51%, coverage 100% →
 
 ---
 
-## 5. 발견/수정한 구현 버그
-
-재현 과정에서 논문 수식 수준의 구현 버그 3건을 직접 발견하고 수정했다.
-
-1. **Eq.8 loss 정규화 오류** — loss를 mean으로 정규화해 positive gradient가 약 100배 희석되며 모델이 collapse하던 문제. per-document sum으로 수정.
-2. **BERT 표현 anisotropy** — 클래스 표현이 준-공선(quasi-collinear)이 되어 구분력을 잃던 문제. centering/normalize + learnable class feature + GCN residual 연결로 수정.
-3. **Core mining의 positivity 조건 누락** — 논문 Section 3.2.2의 positivity 조건이 구현에서 빠져 있어 precision이 18%까지 낮게 측정되던 버그. 조건 추가로 수정.
-
-추가로, path 디코더가 길이-2 경로를 95% 예측하던 길이 편향을 발견해, 라벨 없이 데이터 성질(92.5%가 길이-3)만으로 margin **δ=0.265**를 보정했다.
-
----
-
-## 6. Limitations
+## 5. Limitations
 
 - **행 7의 audit-validation stopping은 순수 weak supervision을 벗어난다** — train gold label 3,000개를 사용한다. entropy 등 label-free stopping 신호로 대체하는 것은 future work.
 - **Self-training의 pseudo-label pool `Q`를 rolling pool로 근사**했다 — 논문의 전체 재계산 방식과 다르며, TaxoClass-full(0.5934)에 도달하지 못한 원인 후보 중 하나다.
@@ -87,7 +75,7 @@ min_conf 스윕 결과 (0 → 0.3에서 precision 30% → 51%, coverage 100% →
 
 ---
 
-## 7. Repository Structure
+## 6. Repository Structure
 
 ```
 weakly-supervised-hmtc/
@@ -96,13 +84,13 @@ weakly-supervised-hmtc/
 │   └── technical_report.md          # 본 문서
 ├── scripts/
 │   ├── 00_verify_dataset.py         # Phase 0: 데이터 검증 (path property 전수 확인)
-│   ├── 01_nli_similarity.py         # NLI similarity 계산 (shard 체크포인팅) ✏️
+│   ├── 01_nli_similarity.py         # NLI similarity 계산 (shard 체크포인팅) 
 │   ├── 02_zeroshot_baseline.py      # 행 1: zero-shot baseline
-│   ├── 03_core_class_mining.py      # core class mining (silver label 채굴) ✏️
-│   ├── 04_train_classifier.py       # classifier 학습 ✏️
+│   ├── 03_core_class_mining.py      # core class mining (silver label 채굴) 
+│   ├── 04_train_classifier.py       # classifier 학습 
 │   ├── 05_decode_eval.py            # path 디코딩 + 평가 (캐시만으로 GPU 없이 재현)
 │   ├── 06_self_training.py          # self-training (--val_size 옵션으로 행 6/7 전환)
-│   └── 07_llm_refinement.py         # LLM refinement (GPT-4o-mini) ✏️
+│   └── 07_llm_refinement.py         # LLM refinement (GPT-4o-mini) 
 ├── src/                             # 공용 모듈
 ├── cache/                           # NLI 점수 행렬 (.npz, shard 단위)
 ├── results/                         # 실험 결과 JSON
@@ -110,7 +98,6 @@ weakly-supervised-hmtc/
 └── reference_data/Amazon-531/       # TELEClass 공개 데이터 (gold label 포함)
 ```
 
-*✏️ 표시 항목(스크립트 파일명 등)은 실제 레포 및 `results/`의 최종 JSON과 대조 확인 후 확정할 것.*
 
 ---
 
